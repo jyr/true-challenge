@@ -24,7 +24,8 @@
 
 - Enter in compose `cd build`
 
-- Build all services `docker-compose up --build`
+- Build db service `docker-compose up db --build`
+- Build api service `docker-compose up api --build`
 
 - Start all services `docker-compose up`
 
@@ -53,6 +54,13 @@ $ docker-compose exec api /bin/sh -c -l "./manage.py test apis.client.tests.apis
 $ docker-compose exec api /bin/sh -c -l "./manage.py test apis"
 $ docker-compose exec api /bin/sh -c -l "./manage.py test backend"
 ```
+
+## Connect to postgresql
+```
+$ docker-compose exec db /bin/sh -c -l "psql -h localhost -U docker -p 5432 realstate"
+```
+
+**Note**: Default postgresql user is 'docker' with password 'docker'.
 
 ## Docs
 
