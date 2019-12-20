@@ -37,15 +37,17 @@ DJANGO_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis',
 ]
 
 THIRD_PARTY_APPS_BASE = [
     'rest_framework',
-    'drf_yasg'
+    'drf_yasg',
+    'djmoney'
 ]
 
 REALSTATE_APIS = [
-    'api.listings',
+    'apis.listings',
 ]
 
 INSTALLED_APPS = ( DJANGO_APPS + THIRD_PARTY_APPS_BASE + REALSTATE_APIS )
@@ -87,9 +89,10 @@ WSGI_APPLICATION = 'realstate.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': 'realstate',
-        'USER': 'postgres',
+        'USER': 'docker',
+        'PASSWORD': 'docker',
         'HOST': 'db',
         'PORT': 5432,
     }
