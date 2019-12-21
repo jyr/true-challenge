@@ -68,3 +68,24 @@ class ListingPhotoEndpoint(APIView):
                 {"error":serializer.errors},
                 status=status.HTTP_400_BAD_REQUEST
         )
+
+
+class ListingDetailEndpoint(APIView):
+
+    def get_object(self, pk):
+        try:
+            return Listing.objects.get(pk=pk)
+        except Listing.DoesNotExist:
+           raise Http404
+
+    @swagger_auto_schema(responses={200: ListingSerializer})
+    def get(self, request, pk, format=None):
+        """
+        get:
+        Retrieve a listing
+        """
+
+        instance = self.get_object(pk)
+        serializer = ListingSerializer(instance)
+        
+        return Response(serializer.data)

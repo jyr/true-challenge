@@ -9,8 +9,13 @@ urlpatterns = ([
         name='list_create_listing'
     ),
     path(
-        route='photos/',
+        route='photos',
         view=endpoints.ListingPhotoEndpoint.as_view(),
         name='create_listing_photo'
+    ),
+    path(
+        route='<uuid:pk>',
+        view=endpoints.ListingDetailEndpoint.as_view(),
+        name='retrieve_listing'
     )
 ])

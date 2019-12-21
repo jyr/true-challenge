@@ -26,14 +26,14 @@ class ListingSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         location_data = validated_data.pop('location')
         location_data['point'] = self._get_point(location_data['point'])
-
-        listing = Listing.objects.create(**validated_data)
-        Location.objects.create(listing=listing, **location_data)
+        location = Location.objects.create(**location_data)
+        listing = Listing.objects.create(location=location, **validated_data)
 
         return listing
 
     def to_representation(self, instance):
          data = super(ListingSerializer, self).to_representation(instance)
+         data = self._get_data_with_photos(data, instance)
 
          return {
             "listing": data
@@ -42,6 +42,15 @@ class ListingSerializer(serializers.ModelSerializer):
     def _get_point(self, data):
         longitude, latitude = data.split(',')
         return fromstr(f'POINT({longitude} {latitude})')
+
+    def _get_data_with_photos(self, data, instance):
+        photos = ListingPhoto.objects.filter(listing=instance)
+        if photos:
+            photos_serializer = ListingPhotoSerializer(instance=photos[0])
+            data.update(photos_serializer.data)
+
+        return data
+
 
 class ListingPhotoSerializer(serializers.ModelSerializer):
 
