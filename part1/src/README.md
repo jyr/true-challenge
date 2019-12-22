@@ -64,7 +64,7 @@ $ docker-compose exec db /bin/sh -c -l "psql -h localhost -U docker -p 5432 real
 
 ## Docs
 
-* **realstate API** - http://api.realstate-dev.com:8000/docs/
+* **realstate API** - https://documenter.getpostman.com/view/1848785/SWLYAWAb?version=latest
 * **HTTP Status Codes** - https://www.restapitutorial.com/httpstatuscodes.html
 
 ## Commitizen
