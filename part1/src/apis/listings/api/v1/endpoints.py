@@ -87,5 +87,46 @@ class ListingDetailEndpoint(APIView):
 
         instance = self.get_object(pk)
         serializer = ListingSerializer(instance)
-        
+
         return Response(serializer.data)
+
+    @swagger_auto_schema(responses={200: ListingSerializer})
+    def patch(self, request, pk, format=None):
+        """
+        patch:
+        Update a listing.
+        """
+
+        instance = self.get_object(pk)
+        serializer = ListingSerializer(
+            instance,
+            data=request.data,
+            partial=True
+        )
+
+        if serializer.is_valid():
+            serializer.save()
+
+            try:
+                return Response(
+                    serializer.data,
+                    status=status.HTTP_200_OK
+                )
+            except:
+                raise Http404
+
+        return Response(
+                {"error":serializer.errors},
+                status=status.HTTP_400_BAD_REQUEST
+        )
+
+    @swagger_auto_schema(responses={200: ListingSerializer})
+    def delete(self, request, pk, format=None):
+        """
+        del:
+        Delete a listing.
+        """
+        instance = self.get_object(pk)
+        instance.delete()
+        
+        return Response(status=status.HTTP_204_NO_CONTENT)

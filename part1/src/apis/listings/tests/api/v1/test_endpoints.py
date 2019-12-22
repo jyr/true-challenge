@@ -114,3 +114,24 @@ class ListingDetailEndpointTest(APITestCase):
         self.assertEqual(type(response.data['listing']['location']).__name__, 'OrderedDict')
         self.assertTrue('photos' in response.data['listing'])
         _cleanup(os.path.dirname(self.listing_photo.image.path))
+
+    def test_patch(self):
+        data = {
+            "baths": 2,
+            "beds": 5,
+            "size": 150,
+            "price": 1100000,
+        }
+
+        response = self.client.patch(self.url, data, format='json')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(
+            type(response.data['listing']).__name__, 'OrderedDict')
+        self.assertEqual(response.data['listing']['baths'], 2)
+        self.assertEqual(response.data['listing']['beds'], 5)
+        self.assertEqual(response.data['listing']['price'], "1100000.00")
+
+    def test_delete(self):
+        response = self.client.delete(self.url)
+
+        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)

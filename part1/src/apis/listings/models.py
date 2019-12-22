@@ -47,7 +47,7 @@ class Listing(models.Model):
         'Location',
         null=True,
         blank=True,
-        on_delete=models.PROTECT,
+        on_delete=models.CASCADE,
         verbose_name=_('Location')
     )
 
@@ -86,7 +86,7 @@ class ListingPhoto(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     listing = models.ForeignKey(
         'Listing',
-        on_delete=models.PROTECT
+        on_delete=models.CASCADE
     )
     name = models.CharField(_('Name'), max_length=60)
     image = models.ImageField(_('Image'), upload_to='listing/')
