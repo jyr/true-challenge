@@ -59,8 +59,12 @@ $ docker-compose exec api /bin/sh -c -l "./manage.py test backend"
 ```
 $ docker-compose exec db /bin/sh -c -l "psql -h localhost -U docker -p 5432 realstate"
 ```
-
 **Note**: Default postgresql user is 'docker' with password 'docker'.
+
+## Deploy to AWS
+```
+$ docker-compose exec api /bin/sh -c -l "zappa init"
+```
 
 ## Docs
 
