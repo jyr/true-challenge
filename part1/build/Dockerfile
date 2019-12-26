@@ -8,8 +8,11 @@ RUN apt-get update && apt-get install \
 
 RUN mkdir /code
 WORKDIR /code
+
 ADD requirements.txt /code/
+ADD aws /root/.aws
 RUN virtualenv /code/env
 ENV VIRTUAL_ENV=/code/env
+
 RUN pip install -Ur requirements.txt
 ADD . /code/

@@ -1,0 +1,13 @@
+{
+    "dev": {
+        "django_settings": "realstate.settings",
+        "profile_name": "default",
+	      "slim_handler": false,
+	      "use_apigateway": true,
+        "project_name": "realstate",
+        "runtime": "python3.7",
+        "s3_bucket": "zappa-dwjphz145",
+        "debug": true,
+        "log_level": "DEBUG",
+    }
+}
