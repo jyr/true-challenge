@@ -1,13 +1,18 @@
 {
     "dev": {
-        "django_settings": "realstate.settings",
+        "django_settings": "realstate.settings.staging",
         "profile_name": "default",
-	      "slim_handler": false,
+	      "slim_handler": true,
 	      "use_apigateway": true,
         "project_name": "realstate",
+        "project_directory": "/code",
         "runtime": "python3.7",
         "s3_bucket": "zappa-dwjphz145",
+        "layers": ["arn:aws:lambda:us-east-2:423539928029:layer:geodjango-libraries-with-data:1"],
+        "environment_variables": {
+          "GDAL_DATA": "/opt/lib/gdal_data",
+        },
         "debug": true,
-        "log_level": "DEBUG",
+        "log_level": "DEBUG"
     }
 }

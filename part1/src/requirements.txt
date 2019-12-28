@@ -4,5 +4,5 @@ djangorestframework==3.10.1
 drf-yasg==1.17.0
 django_money==1.0
 Pillow==6.2.1
-zappa==0.48.2
 awscli==1.16.309
+numpy==1.18.0

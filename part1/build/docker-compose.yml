@@ -11,13 +11,15 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: python /code/manage.py runserver 0.0.0.0:8000
     volumes:
       - ../src:/code/
+      - virtualenv-lib:/code/env
     ports:
       - 8000:8000
     depends_on:
       - db
+    command: sh /code/utils/create_env.sh
 
 volumes:
   postgis-data:
+  virtualenv-lib:

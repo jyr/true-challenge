@@ -63,8 +63,9 @@ $ docker-compose exec db /bin/sh -c -l "psql -h localhost -U docker -p 5432 real
 
 ## Deploy to AWS
 ```
-$ docker-compose exec api /bin/sh -c -l "zappa init"
-$ docker-compose exec api /bin/sh -c -l "zappa deploy dev -s realstate/zappa_settings.json; zappa tail"
+$ docker-compose exec api /bin/sh -c -l ". env/bin/activate; cd realstate; zappa init"
+$ docker-compose exec api /bin/sh -c -l ". env/bin/activate; zappa deploy dev -s realstate/zappa_settings.json; zappa tail -s realstate/zappa_settings.json"
+$ docker-compose exec api /bin/sh -c -l ". env/bin/activate; zappa undeploy -s realstate/zappa_settings.json;"
 ```
 
 ## Docs
