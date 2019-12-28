@@ -68,6 +68,15 @@ $ docker-compose exec api /bin/sh -c -l ". env/bin/activate; zappa deploy dev -s
 $ docker-compose exec api /bin/sh -c -l ". env/bin/activate; zappa undeploy -s realstate/zappa_settings.json;"
 ```
 
+## Database chores on AWS
+```
+$ psql -U postgres -h my_host.awsamazon.com
+postgres=> create database realstate;
+$ zappa manage staging showmigrations -s realstate/zappa_settings.json
+$ zappa manage staging makemigrations -s realstate/zappa_settings.json
+$ zappa manage staging migrate -s realstate/zappa_settings.json
+```
+
 ## Docs
 
 * **realstate API** - https://documenter.getpostman.com/view/1848785/SWLYAWAb?version=latest
