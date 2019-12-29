@@ -1,0 +1,609 @@
+{
+	"info": {
+		"_postman_id": "a259b755-348e-4d25-ae19-80ea6adcea46",
+		"name": "TrueHome",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api/v1/listings/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"baths\": 1,\n    \"beds\": 1,\n    \"size\": 250,\n    \"price\": 1000000,\n    \"description\": \"Exclusiva Casa Totalmente remodelada en venta, ubicada en la calle Yautepec de la prestigiosa Colonia Condesa, que conserva el estilo más puro  “Art Decó” que caracteriza a la Colonia.\",\n    \"listing_type\": \"house\",\n    \"slug\": \"bla3\",\n    \"location\": {\n        \"street\":\"Yautepec, Condesa\",\n        \"suburb\":\"Condesa\",\n        \"city\":\"Cuauhtémoc\",\n        \"state\":\"Ciudad de México\",\n        \"zipcode\":\"06140\",\n        \"point\":\"19.4125748,-99.1795313\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/v1/listings/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"listings",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/v1/listings/",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"baths\": 1,\n    \"beds\": 1,\n    \"size\": 250,\n    \"price\": 1000000,\n    \"description\": \"Exclusiva Casa Totalmente remodelada en venta, ubicada en la calle Yautepec de la prestigiosa Colonia Condesa, que conserva el estilo más puro  “Art Decó” que caracteriza a la Colonia.\",\n    \"listing_type\": \"house\",\n    \"slug\": \"bla3\",\n    \"location\": {\n        \"street\":\"Yautepec, Condesa\",\n        \"suburb\":\"Condesa\",\n        \"city\":\"Cuauhtémoc\",\n        \"state\":\"Ciudad de México\",\n        \"zipcode\":\"06140\",\n        \"point\":\"19.4125748,-99.1795313\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/v1/listings/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"listings",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 22 Dec 2019 01:32:13 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "581"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"listing\": {\n        \"id\": \"20b7c2b3-c22e-4700-9475-1c60e52271e4\",\n        \"baths\": 1,\n        \"beds\": 1,\n        \"size\": 250,\n        \"price\": \"1000000.00\",\n        \"location\": {\n            \"street\": \"Yautepec, Condesa\",\n            \"suburb\": \"Condesa\",\n            \"city\": \"Cuauhtémoc\",\n            \"state\": \"Ciudad de México\",\n            \"zipcode\": \"06140\",\n            \"point\": \"SRID=4326;POINT (19.4125748 -99.17953129999999)\"\n        },\n        \"slug\": \"bla3\",\n        \"listing_type\": \"house\",\n        \"description\": \"Exclusiva Casa Totalmente remodelada en venta, ubicada en la calle Yautepec de la prestigiosa Colonia Condesa, que conserva el estilo más puro  “Art Decó” que caracteriza a la Colonia.\",\n        \"created_at\": \"2019-12-22T01:32:13.802789Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "api/v1/listings/photos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "listing",
+							"value": "20b7c2b3-c22e-4700-9475-1c60e52271e4",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/jyr/Downloads/1.jpg"
+						},
+						{
+							"key": "type",
+							"value": "facade",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/listings/photos",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"listings",
+						"photos"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/v1/listings/photos",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "listing",
+									"value": "20b7c2b3-c22e-4700-9475-1c60e52271e4",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/Users/jyr/Downloads/1.jpg"
+								},
+								{
+									"key": "type",
+									"value": "facade",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/listings/photos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"listings",
+								"photos"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 22 Dec 2019 01:33:29 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "145"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"photos\": {\n        \"id\": \"18ea0ec8-e98d-44d2-bb47-e240eff3910f\",\n        \"image\": \"listing/1.jpg\",\n        \"type\": \"facade\",\n        \"listing\": \"20b7c2b3-c22e-4700-9475-1c60e52271e4\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "api/v1/listings/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/listings/20b7c2b3-c22e-4700-9475-1c60e52271e4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"listings",
+						"20b7c2b3-c22e-4700-9475-1c60e52271e4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/v1/listings/:id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/listings/20b7c2b3-c22e-4700-9475-1c60e52271e4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"listings",
+								"20b7c2b3-c22e-4700-9475-1c60e52271e4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 22 Dec 2019 01:34:02 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "725"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"listing\": {\n        \"id\": \"20b7c2b3-c22e-4700-9475-1c60e52271e4\",\n        \"baths\": 1,\n        \"beds\": 1,\n        \"size\": 250,\n        \"price\": \"1000000.00\",\n        \"location\": {\n            \"street\": \"Yautepec, Condesa\",\n            \"suburb\": \"Condesa\",\n            \"city\": \"Cuauhtémoc\",\n            \"state\": \"Ciudad de México\",\n            \"zipcode\": \"06140\",\n            \"point\": \"SRID=4326;POINT (19.4125748 -99.17953129999999)\"\n        },\n        \"slug\": \"bla3\",\n        \"listing_type\": \"house\",\n        \"description\": \"Exclusiva Casa Totalmente remodelada en venta, ubicada en la calle Yautepec de la prestigiosa Colonia Condesa, que conserva el estilo más puro  “Art Decó” que caracteriza a la Colonia.\",\n        \"created_at\": \"2019-12-22T01:32:13.802789Z\",\n        \"photos\": {\n            \"id\": \"18ea0ec8-e98d-44d2-bb47-e240eff3910f\",\n            \"image\": \"listing/1.jpg\",\n            \"type\": \"facade\",\n            \"listing\": \"20b7c2b3-c22e-4700-9475-1c60e52271e4\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "api/v1/listings/:id",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"baths\": 4,\n\t\"beds\": 3,\n\t\"size\": 350,\n\t\"price\": 1110000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/listings/20b7c2b3-c22e-4700-9475-1c60e52271e4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"listings",
+						"20b7c2b3-c22e-4700-9475-1c60e52271e4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/v1/listings/:id",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"baths\": 4,\n\t\"beds\": 3,\n\t\"size\": 350,\n\t\"price\": 1110000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/listings/20b7c2b3-c22e-4700-9475-1c60e52271e4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"listings",
+								"20b7c2b3-c22e-4700-9475-1c60e52271e4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 22 Dec 2019 01:36:00 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "725"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"listing\": {\n        \"id\": \"20b7c2b3-c22e-4700-9475-1c60e52271e4\",\n        \"baths\": 4,\n        \"beds\": 3,\n        \"size\": 350,\n        \"price\": \"1110000.00\",\n        \"location\": {\n            \"street\": \"Yautepec, Condesa\",\n            \"suburb\": \"Condesa\",\n            \"city\": \"Cuauhtémoc\",\n            \"state\": \"Ciudad de México\",\n            \"zipcode\": \"06140\",\n            \"point\": \"SRID=4326;POINT (19.4125748 -99.17953129999999)\"\n        },\n        \"slug\": \"bla3\",\n        \"listing_type\": \"house\",\n        \"description\": \"Exclusiva Casa Totalmente remodelada en venta, ubicada en la calle Yautepec de la prestigiosa Colonia Condesa, que conserva el estilo más puro  “Art Decó” que caracteriza a la Colonia.\",\n        \"created_at\": \"2019-12-22T01:32:13.802789Z\",\n        \"photos\": {\n            \"id\": \"18ea0ec8-e98d-44d2-bb47-e240eff3910f\",\n            \"image\": \"listing/1.jpg\",\n            \"type\": \"facade\",\n            \"listing\": \"20b7c2b3-c22e-4700-9475-1c60e52271e4\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "api/v1/listings/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/listings/20b7c2b3-c22e-4700-9475-1c60e52271e4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"listings",
+						"20b7c2b3-c22e-4700-9475-1c60e52271e4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/v1/listings/:id",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/listings/20b7c2b3-c22e-4700-9475-1c60e52271e4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"listings",
+								"20b7c2b3-c22e-4700-9475-1c60e52271e4"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 22 Dec 2019 01:37:40 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.5"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}

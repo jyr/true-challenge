@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+  db:
+    image: kartoza/postgis:12.0
+    volumes:
+      - postgis-data:/var/lib/postgresql
+    environment:
+      - POSTGRES_DB=realstate
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../src:/code/
+      - virtualenv-lib:/code/env
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+    command: sh /code/utils/create_env.sh
+
+volumes:
+  postgis-data:
+  virtualenv-lib:
