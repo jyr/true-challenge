@@ -1,0 +1,608 @@
+{
+	"info": {
+		"_postman_id": "e44f7640-874d-417d-bafd-9c1b87ff132c",
+		"name": "TrueHome-staging",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api/v1/listings/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"baths\": 1,\n    \"beds\": 1,\n    \"size\": 250,\n    \"price\": 1000000,\n    \"description\": \"Exclusiva Casa Totalmente remodelada en venta, ubicada en la calle Yautepec de la prestigiosa Colonia Condesa, que conserva el estilo más puro  “Art Decó” que caracteriza a la Colonia.\",\n    \"listing_type\": \"house\",\n    \"slug\": \"yautepec-casa-condesa\",\n    \"location\": {\n        \"street\":\"Yautepec, Condesa\",\n        \"suburb\":\"Condesa\",\n        \"city\":\"Cuauhtémoc\",\n        \"state\":\"Ciudad de México\",\n        \"zipcode\":\"06140\",\n        \"point\":\"19.4125748,-99.1795313\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hrpz6pvqu7.execute-api.us-east-2.amazonaws.com/staging/api/v1/listings/",
+					"protocol": "https",
+					"host": [
+						"hrpz6pvqu7",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"staging",
+						"api",
+						"v1",
+						"listings",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/v1/listings/",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"baths\": 1,\n    \"beds\": 1,\n    \"size\": 250,\n    \"price\": 1000000,\n    \"description\": \"Exclusiva Casa Totalmente remodelada en venta, ubicada en la calle Yautepec de la prestigiosa Colonia Condesa, que conserva el estilo más puro  “Art Decó” que caracteriza a la Colonia.\",\n    \"listing_type\": \"house\",\n    \"slug\": \"yautepec-casa-condesa\",\n    \"location\": {\n        \"street\":\"Yautepec, Condesa\",\n        \"suburb\":\"Condesa\",\n        \"city\":\"Cuauhtémoc\",\n        \"state\":\"Ciudad de México\",\n        \"zipcode\":\"06140\",\n        \"point\":\"19.4125748,-99.1795313\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hrpz6pvqu7.execute-api.us-east-2.amazonaws.com/staging/api/v1/listings/",
+							"protocol": "https",
+							"host": [
+								"hrpz6pvqu7",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"staging",
+								"api",
+								"v1",
+								"listings",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "438"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 29 Dec 2019 16:49:27 GMT"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "39798a88-efc1-4db3-a4c6-35453a1cc6f4"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "x-amzn-Remapped-Content-Length",
+							"value": "598"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "FebbsEE3CYcFgjw="
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-5e08d917-e53e3c50e947bd008a7be180;Sampled=0"
+						},
+						{
+							"key": "X-Cache",
+							"value": "Miss from cloudfront"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 125207e6ab84815ebe7dac5799ad56c3.cloudfront.net (CloudFront)"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "DFW50-C1"
+						},
+						{
+							"key": "X-Amz-Cf-Id",
+							"value": "8MImkhwMJJjhazfAHOc51MHvBM3jVbM6VgH0W-yVnezCG8XmI-uZ4Q=="
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"listing\": {\n        \"id\": \"cdb867fc-a363-453f-bec2-f62c33fe5896\",\n        \"baths\": 1,\n        \"beds\": 1,\n        \"size\": 250,\n        \"price\": \"1000000.00\",\n        \"location\": {\n            \"street\": \"Yautepec, Condesa\",\n            \"suburb\": \"Condesa\",\n            \"city\": \"Cuauhtémoc\",\n            \"state\": \"Ciudad de México\",\n            \"zipcode\": \"06140\",\n            \"point\": \"SRID=4326;POINT (19.4125748 -99.17953129999999)\"\n        },\n        \"slug\": \"yautepec-casa-condesa\",\n        \"listing_type\": \"house\",\n        \"description\": \"Exclusiva Casa Totalmente remodelada en venta, ubicada en la calle Yautepec de la prestigiosa Colonia Condesa, que conserva el estilo más puro  “Art Decó” que caracteriza a la Colonia.\",\n        \"created_at\": \"2019-12-29T16:49:27.744913Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "api/v1/listings/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "hrpz6pvqu7.execute-api.us-east-2.amazonaws.com/staging/api/v1/listings/cdb867fc-a363-453f-bec2-f62c33fe5896",
+					"host": [
+						"hrpz6pvqu7",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"staging",
+						"api",
+						"v1",
+						"listings",
+						"cdb867fc-a363-453f-bec2-f62c33fe5896"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/v1/listings/:id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "hrpz6pvqu7.execute-api.us-east-2.amazonaws.com/staging/api/v1/listings/cdb867fc-a363-453f-bec2-f62c33fe5896",
+							"host": [
+								"hrpz6pvqu7",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"staging",
+								"api",
+								"v1",
+								"listings",
+								"cdb867fc-a363-453f-bec2-f62c33fe5896"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "438"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 29 Dec 2019 22:15:30 GMT"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "d3ea3571-b609-497c-a0aa-568c7bba28d2"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "x-amzn-Remapped-Content-Length",
+							"value": "598"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "FfLMbEA6CYcFtcA="
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-5e092582-c4fb04871918df7f60f4839e;Sampled=0"
+						},
+						{
+							"key": "X-Cache",
+							"value": "Miss from cloudfront"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 d0093be1f3b8c667fbe6544e05e0e22c.cloudfront.net (CloudFront)"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "DFW50-C1"
+						},
+						{
+							"key": "X-Amz-Cf-Id",
+							"value": "ueOo7QwbpYsqcblnkSxqIaAdH-ZGLSzIDJeM1XgsHoQCnscVbW2qbA=="
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"listing\": {\n        \"id\": \"cdb867fc-a363-453f-bec2-f62c33fe5896\",\n        \"baths\": 1,\n        \"beds\": 1,\n        \"size\": 250,\n        \"price\": \"1000000.00\",\n        \"location\": {\n            \"street\": \"Yautepec, Condesa\",\n            \"suburb\": \"Condesa\",\n            \"city\": \"Cuauhtémoc\",\n            \"state\": \"Ciudad de México\",\n            \"zipcode\": \"06140\",\n            \"point\": \"SRID=4326;POINT (19.4125748 -99.17953129999999)\"\n        },\n        \"slug\": \"yautepec-casa-condesa\",\n        \"listing_type\": \"house\",\n        \"description\": \"Exclusiva Casa Totalmente remodelada en venta, ubicada en la calle Yautepec de la prestigiosa Colonia Condesa, que conserva el estilo más puro  “Art Decó” que caracteriza a la Colonia.\",\n        \"created_at\": \"2019-12-29T16:49:27.744913Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "api/v1/listings/:id",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"baths\": 4,\n\t\"beds\": 3,\n\t\"size\": 350,\n\t\"price\": 1110000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hrpz6pvqu7.execute-api.us-east-2.amazonaws.com/staging/api/v1/listings/cdb867fc-a363-453f-bec2-f62c33fe5896",
+					"protocol": "https",
+					"host": [
+						"hrpz6pvqu7",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"staging",
+						"api",
+						"v1",
+						"listings",
+						"cdb867fc-a363-453f-bec2-f62c33fe5896"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/v1/listings/:id",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"baths\": 4,\n\t\"beds\": 3,\n\t\"size\": 350,\n\t\"price\": 1110000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hrpz6pvqu7.execute-api.us-east-2.amazonaws.com/staging/api/v1/listings/cdb867fc-a363-453f-bec2-f62c33fe5896",
+							"protocol": "https",
+							"host": [
+								"hrpz6pvqu7",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"staging",
+								"api",
+								"v1",
+								"listings",
+								"cdb867fc-a363-453f-bec2-f62c33fe5896"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "440"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 29 Dec 2019 22:15:59 GMT"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "65abb920-311b-41f3-b4f5-b6f85bcf5150"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "x-amzn-Remapped-Content-Length",
+							"value": "598"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "FfLQ4G_CCYcF4BQ="
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-5e09259f-eec89748db5efda0cdfe91e4;Sampled=0"
+						},
+						{
+							"key": "X-Cache",
+							"value": "Miss from cloudfront"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 d0093be1f3b8c667fbe6544e05e0e22c.cloudfront.net (CloudFront)"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "DFW50-C1"
+						},
+						{
+							"key": "X-Amz-Cf-Id",
+							"value": "wUSxyaJ8eLDc8xLJzwynuAeyImSha3Eu1NzCj3JytMh2ZuS0HmmLyQ=="
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"listing\": {\n        \"id\": \"cdb867fc-a363-453f-bec2-f62c33fe5896\",\n        \"baths\": 4,\n        \"beds\": 3,\n        \"size\": 350,\n        \"price\": \"1110000.00\",\n        \"location\": {\n            \"street\": \"Yautepec, Condesa\",\n            \"suburb\": \"Condesa\",\n            \"city\": \"Cuauhtémoc\",\n            \"state\": \"Ciudad de México\",\n            \"zipcode\": \"06140\",\n            \"point\": \"SRID=4326;POINT (19.4125748 -99.17953129999999)\"\n        },\n        \"slug\": \"yautepec-casa-condesa\",\n        \"listing_type\": \"house\",\n        \"description\": \"Exclusiva Casa Totalmente remodelada en venta, ubicada en la calle Yautepec de la prestigiosa Colonia Condesa, que conserva el estilo más puro  “Art Decó” que caracteriza a la Colonia.\",\n        \"created_at\": \"2019-12-29T16:49:27.744913Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "api/v1/listings/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://hrpz6pvqu7.execute-api.us-east-2.amazonaws.com/staging/api/v1/listings/cdb867fc-a363-453f-bec2-f62c33fe5896",
+					"protocol": "http",
+					"host": [
+						"hrpz6pvqu7",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"staging",
+						"api",
+						"v1",
+						"listings",
+						"cdb867fc-a363-453f-bec2-f62c33fe5896"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/v1/listings/:id",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://hrpz6pvqu7.execute-api.us-east-2.amazonaws.com/staging/api/v1/listings/cdb867fc-a363-453f-bec2-f62c33fe5896",
+							"protocol": "http",
+							"host": [
+								"hrpz6pvqu7",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"staging",
+								"api",
+								"v1",
+								"listings",
+								"cdb867fc-a363-453f-bec2-f62c33fe5896"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 29 Dec 2019 22:17:04 GMT"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "76fce006-075f-4a28-8318-4917c887310e"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "x-amzn-Remapped-Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "FfLbEFY3iYcFY2g="
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-5e0925e0-3bf0775e7cd9c749bfd9f7e7;Sampled=0"
+						},
+						{
+							"key": "X-Cache",
+							"value": "Miss from cloudfront"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 d0093be1f3b8c667fbe6544e05e0e22c.cloudfront.net (CloudFront)"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "DFW50-C1"
+						},
+						{
+							"key": "X-Amz-Cf-Id",
+							"value": "fgJ7Mwdt40e1v4hQunilSJrbogQo8VwR4sWsILOO1gQDXhRp7zu1zQ=="
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}
