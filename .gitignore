@@ -110,3 +110,5 @@ package.json
 
 #MacOS
 .DS_Store
+
+zappa_settings.json

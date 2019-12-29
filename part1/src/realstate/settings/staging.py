@@ -14,7 +14,7 @@ DATABASES = {
         'USER': environ['USER_DB'],
         'PASSWORD': environ['PASSWORD_DB'],
         'HOST': environ['HOST_DB'],
-        'PORT': environ['PORT_DB5'],
+        'PORT': environ['PORT_DB']
     }
 }
 

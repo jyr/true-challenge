@@ -1,0 +1,26 @@
+{
+    "staging": {
+        "django_settings": "realstate.settings.staging",
+        "profile_name": "default",
+	      "slim_handler": true,
+        "project_name": "realstate",
+        "project_directory": "/code",
+        "runtime": "python3.7",
+        "s3_bucket": "zappa-dwjphz146",
+        "layers": ["_your_geodjango-libraries-with-data_layer"],
+        "environment_variables": {
+          "GDAL_DATA": "/opt/lib/gdal_data",
+          "NAME_DB": "your_name_db",
+          "USER_DB": "your_user_db",
+          "PASSWORD_DB": "your_password_dv",
+          "HOST_DB": "your_host_db",
+          "PORT_DB": "your_password_db"
+        },
+        "vpc_config" : {
+            "SubnetIds": [ "subnet-0cc417137e1f07b50", "subnet-0f9636dacb771e9ec"], // use the private subnet
+            "SecurityGroupIds": [ "sg-7c06a818" ]
+        },
+        "debug": true,
+        "log_level": "DEBUG"
+    }
+}
